@@ -1,13 +1,11 @@
 <template>
   <div v-for="user in users" :key="user.id" class="general-user-card-container" @click="redirectToUser(user.uid)">
-    <div>
-      <img :src="user.avatar" alt="Avatar" class="general-user-card-img">
-      <section class="general-user-card-section">
-        <div>{{ user.last_name }}, {{ user.first_name }}</div>
-        <div>{{ user.email }}</div>
-        <div>{{ user.username }}</div>
-      </section>
-    </div>
+    <img :src="user.avatar" alt="Avatar" class="general-user-card-img">
+    <section class="general-user-card-section">
+      <div>{{ user.last_name }}, {{ user.first_name }}</div>
+      <div>{{ user.email }}</div>
+      <div>{{ user.username }}</div>
+    </section>
   </div>
 </template>
 
