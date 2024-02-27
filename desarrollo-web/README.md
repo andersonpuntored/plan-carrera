@@ -1,75 +1,29 @@
-# Nuxt 3 Minimal Starter
+# Plan carrera
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+plan-carrera es el desarrollo de una simple app desarrollada en el framework Nuxt 3
+y tiene el objetivo de mostrar un listado de usuarios y averiguar datos sobre el usuario que se elija
 
-## Setup
+## Pre-requisitos
 
-Make sure to install the dependencies:
+* Node v18.18.1
+* NPM 9.8.1
 
-```bash
-# npm
-npm install
+## Instalación
+Instalar las dependencias del archivo package.json
 
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
+```Shell
+$ npm install
 ```
 
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
+### Despliegue en Local
+```Shell
+$ npm run dev
 ```
 
-## Production
+### Abrir aplicación 🌎
+Ir al siguiente enlace reemplazando localhost y el puerto según el caso, ej:
+http://localhost:3000/users/
 
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
+```http request
+http://localhost:3000/users/
 ```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
