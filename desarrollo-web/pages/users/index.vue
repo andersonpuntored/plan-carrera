@@ -12,24 +12,23 @@
 </template>
 
 <script>
-import { ref, onMounted } from 'vue';
+import { ref, onMounted } from 'vue'
 import { getUsers } from "~/api/controllers/users.controller.ts"
 
 export default {
   setup() {
-    const users = ref([]);
+    const users = ref([])
 
     onMounted(async () => {
       try {
-        const fetchedUsers = await getUsers();
-        console.log('fetchedUsers', fetchedUsers);
+        const fetchedUsers = await getUsers()
+        console.log('fetchedUsers', fetchedUsers)
         users.value = fetchedUsers;
       } catch (error) {
-        console.error('Error fetching users:', error);
+        console.error('Error fetching users:', error)
       }
-    });
-
-    return { users };
+    })
+    return { users }
   }
 }
 </script>
