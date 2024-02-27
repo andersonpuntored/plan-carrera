@@ -1,24 +1,19 @@
 <template>
-  <div v-for="user in users"
-       :key="user.id"
-       class="general-user-card-container"
-  >
-    <img :src="user.avatar"
-         alt="Avatar"
-         class="general-user-card-img"
-    >
-    <section class="general-user-card-section">
-      <div>{{ user.last_name }}, {{ user.first_name }}</div>
-      <div>{{ user.email }}</div>
-      <div>{{ user.username }}</div>
-    </section>
+  <div v-for="user in users" :key="user.id" class="general-user-card-container" @click="redirectToUser(user.uid)">
+    <div>
+      <img :src="user.avatar" alt="Avatar" class="general-user-card-img">
+      <section class="general-user-card-section">
+        <div>{{ user.last_name }}, {{ user.first_name }}</div>
+        <div>{{ user.email }}</div>
+        <div>{{ user.username }}</div>
+      </section>
+    </div>
   </div>
 </template>
 
 <script>
 import { ref, onMounted } from 'vue'
 import { getUsers } from "~/api/controllers/users.controller.ts"
-
 export default {
   setup() {
     const users = ref([])
@@ -26,16 +21,20 @@ export default {
     onMounted(async () => {
       try {
         const fetchedUsers = await getUsers()
-        console.log('fetchedUsers', fetchedUsers)
-        users.value = fetchedUsers;
+        users.value = fetchedUsers
       } catch (error) {
         console.error('Error fetching users:', error)
       }
     })
-    return { users }
+
+    const redirectToUser = (userId) => {
+      window.location.href = `/user/${userId}`
+    }
+    return { users, redirectToUser }
   }
 }
 </script>
+
 <style>
 .general-user-card-container {
   display: flex;
@@ -44,6 +43,7 @@ export default {
   border: solid 1px black;
   border-radius: 10px;
   margin: 10px;
+  cursor: pointer;
 }
 .general-user-card-img{
   height: 100px;
