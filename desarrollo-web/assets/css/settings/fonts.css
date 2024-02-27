@@ -1,0 +1,63 @@
+/* Titles */
+@font-face {
+  font-family: "Exo";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("~/assets/fonts/fontsTitles/Exo-Regular.ttf") format("truetype"),
+  url("assets/fonts/fontsTitles/Exo-Regular.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Exo-Bold";
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url("~/assets/fonts/fontsTitles/Exo-Bold.ttf") format("truetype"),
+    url("assets/fonts/fontsTitles/Exo-Bold.ttf") format("truetype");
+  }
+@font-face {
+    font-family: "Exo-SemiBold";
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url("~/assets/fonts/fontsTitles/Exo-SemiBold.ttf") format("truetype"),
+    url("assets/fonts/fontsTitles/Exo-SemiBold.ttf") format("truetype");
+  }
+@font-face {
+    font-family: "Exo-Light";
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url("~/assets/fonts/fontsTitles/Exo-Light.ttf") format("truetype"),
+    url("assets/fonts/fontsTitles/Exo-Light.ttf") format("truetype");
+  }
+/* Texts */
+@font-face {
+  font-family: "Verdana";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("~/assets/fonts/fontsTexts/Verdana.ttf") format("truetype"),
+  url("assets/fonts/fontsTexts/Verdana.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Verdana-Bold";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("~/assets/fonts/fontsTexts/Verdana-Bold.ttf") format("truetype"),
+  url("assets/fonts/fontsTexts/Verdana-Bold.ttf") format("truetype");
+}
+
+* {
+  font-family: Verdana;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Exo-Bold;
+  font-weight: 700;
+}

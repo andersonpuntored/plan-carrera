@@ -1,0 +1,30 @@
+/* Generic */
+@import url('./generic/box-sizing.css');
+@import url('./generic/normalize.css');
+@import url('./generic/scroll.css');
+
+/* Settings */
+@import url('./settings/colors.css');
+@import url('./settings/fonts.css');
+
+html {
+    font-size: 16px;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+    border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color);
+    border-radius: 50px;
+}
+
+p {
+    margin: 0;
+}
